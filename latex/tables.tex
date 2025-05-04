@@ -1,0 +1,34 @@
+\documentclass{article}
+
+\title{Table Tests}
+
+\begin{document}
+
+\section{A Simple Table}
+
+\begin{tabular}{cc}
+a & b \\
+c & d
+\end{tabular}
+
+\section{A Table with Borders}
+
+\begin{tabular}{|c| c c c c c c|}
+\hline Month & April & May & June & July & August & September  \\ \hline
+ Income & \pounds  1260 & \pounds  1440 & \pounds  1440 & \pounds  2700 & \pounds  3240 & \pounds  3600 \\ \hline
+\end{tabular}
+
+\section{A Table with Spanning Cells}
+
+\begin{tabular}{crcl}
+\hline
+a stray cat & frogs & sdf & top row end
+
+s \\
+\hline
+\textbf{c} & \multicolumn{2}{c}{dogs in the wild} & end \\
+\hline
+\end{tabular}
+
+
+\end{document}

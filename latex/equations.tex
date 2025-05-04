@@ -1,0 +1,68 @@
+\documentclass{amsart}
+
+\title{Maths Tests}
+
+\begin{document}
+
+The equation $x^2 + y^2 = z^2$ is interesting.
+
+Sometimes large equations like
+\[
+\dfrac{\sin\left( \dfrac{x}{1+x^2}  + 4\right)}{\exp(x)}
+\]
+are displayed.
+
+The equation environment
+\begin{equation}
+\label{euler product}
+\zeta(s) = \prod \dfrac{1}{1 - \tfrac{1}{p^s}}
+\end{equation}
+numbers its equation.
+
+A starred equation environment does not affect equation numbering
+\begin{equation*}
+\int\limits_{-\infty}^\infty e^{-x^2} \,\mathsf{d} x = \pi^2
+\end{equation*}
+because the following unstarred equation
+\begin{equation}
+\log(1) = 0
+\end{equation}
+is number 2.
+
+An align environment numbers each of its equation lines.
+\begin{align}
+\label{sin}
+\sin(0) &= 0 \\
+\label{cos}
+\cos(0) &= 1
+\end{align}
+but a starred align environment does not
+\begin{align*}
+\sin(\pi) &= 0 \\
+\cos(\pi) &= -1
+\end{align*}
+because
+\begin{equation}
+\int_{-\infty}^\infty \dfrac{1}{1+x^2} \,\mathsf{d} x = \pi
+\end{equation}
+is number 5.
+
+Lets refer back to the Euler product formula \ref{euler product} using the ref macro and to the $\cos(\pi) = -1$ equation \eqref{cos} using the eqref macro.
+
+There is also the gather environment
+\begin{gather}
+\label{cont}
+(\forall \epsilon > 0) (\exists \delta > 0) (\forall x \in D) ( |x-a| < \delta \Rightarrow |f(x) - f(a)| < \epsilon) \\
+\label{number}
+\tan(5)
+\end{gather}
+to which we can refer.
+Indeed \ref{cont} is the definition of continuity using the ref macro and \eqref{number} is the tangent of five referred to using the eqref macro.
+The starred gather environment
+\begin{gather*}
+4+9 \\
+2+11
+\end{gather*}
+does not have equation numbers.
+
+\end{document}

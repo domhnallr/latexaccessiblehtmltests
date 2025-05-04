@@ -1,0 +1,25 @@
+\documentclass{article}
+
+\begin{document}
+
+The \verb|\verb| macro prints its ``argument'' without any further processing. In HTML this is represented by the \verb|code| element.
+
+\verb|cat|
+
+Various characters can be used to delimit the contents of the \verb{verb{ command. Even \verb}{} can be used! 
+
+The \verb|verbatim| environment prints blocks of text without any further processing. In HTML this is represented by the \verb|pre| element.
+
+\begin{verbatim}
+Here is text in a verbatim environment.
+
+\begin{theorem}
+$5$ is odd.
+\end{theorem}
+
+This is the last sentence in the verbatim environment.
+\end{verbatim}
+
+Now things are back to normal.
+
+\end{document}
